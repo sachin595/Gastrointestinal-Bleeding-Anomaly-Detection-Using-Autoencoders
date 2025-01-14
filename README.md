@@ -34,8 +34,7 @@ Gastrointestinal (GI) bleeding is a critical condition that requires timely diag
 
 ## **Key Objectives**
 1. **Develop an autoencoder model** to identify bleeding or lesion images as anomalies using only normal images for training.
-2. **Evaluate the effectiveness** of the anomaly detection approach in detecting GI bleeding, aiming to reduce false positives while maintaining high sensitivity.
-3. **Investigate the potential** of using anomaly maps to locate bleeding areas within the image for added interpretability.
+2. **Investigate the potential** of using anomaly maps to locate bleeding areas within the image for added interpretability.
 
 ---
 
@@ -49,6 +48,7 @@ Gastrointestinal (GI) bleeding is a critical condition that requires timely diag
 ---
 
 ### **Autoencoder Model Development**
+Objective 1: Develop an Autoencoder Model
 
 #### Architecture
 The autoencoder consists of an encoder-decoder structure:
@@ -69,13 +69,22 @@ The autoencoder consists of an encoder-decoder structure:
 #### Anomaly Detection Mechanism
 - **Reconstruction**: For each test image, the model reconstructed the image.
 - **Reconstruction Error**: A pixel-wise reconstruction error was calculated between the input and reconstructed image.
-- **Thresholding**: Based on validation performance, a threshold of 0.0057 was set:
+- Images with high reconstruction errors were flagged as anomalous, likely indicating the presence of lesions or bleeding.
+- **Thresholding**: The threshold for reconstruction error was determined during validation based on model performance.
+- Images with reconstruction errors below the threshold were classified as normal, while those above were classified as bleeding (anomalous).
+- Based on validation performance, a threshold of 0.0057 was set:
   - Normal images: Mean reconstruction error ≈ 0.0011.
   - Bleeding images: Mean reconstruction error ≈ 0.0068.
+- **Explanation of Threshold**: The threshold differentiates normal and bleeding images effectively by balancing sensitivity and specificity.
+	Example:
+	- A test image with a reconstruction error of 0.0012 is classified as normal.
+	- A test image with a reconstruction error of 0.0065 is classified as bleeding.
+
 
 ---
 
 ## **Anomaly Map and Localization**
+Objective 2: Investigate the Use of Anomaly Maps
 
 ### **Anomaly Map**
 - Pixel-wise differences between the input image and its reconstruction were calculated to highlight regions with high reconstruction errors.
