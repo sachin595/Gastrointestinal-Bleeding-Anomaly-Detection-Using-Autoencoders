@@ -1,7 +1,7 @@
 # Gastrointestinal-Bleeding-Anomaly-Detection-Using-Autoencoders
 Anomaly Detection for Automated Identification of Gastrointestinal Bleeding in Wireless Capsule Endoscopy Images Using Autoencoders
 
-![Research](https://img.shields.io/badge/Field-Medical%20AI-green.svg)
+![Research](https://img.shields.io/badge/Research-Medical%20AI-green.svg)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/gastrointestinal-bleeding-images-dataset)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
