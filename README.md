@@ -1,4 +1,4 @@
-# Gastrointestinal-Bleeding-Anomaly-Detection-Using-Autoencoders
+# Anomaly Detection in Gastrointestinal Bleeding Using Autoencoders
 Anomaly Detection for Automated Identification of Gastrointestinal Bleeding in Wireless Capsule Endoscopy Images Using Autoencoders
 
 ![Research](https://img.shields.io/badge/Research-Medical%20AI-green.svg)
